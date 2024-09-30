@@ -94,7 +94,7 @@ jobs:
 
   build-windows:
     name: Build & push windows
-    if: github.repository == 'nikheal2/argo-workflows'
+    if: github.repository == 'argoproj/argo-workflows'
     runs-on: windows-2022
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1

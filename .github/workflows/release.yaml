@@ -63,7 +63,7 @@ jobs:
 
       - name: Docker Buildx
         env:
-          DOCKERIO_ORG: nik_heal
+          DOCKERIO_ORG: quay.io/nik_heal
           PLATFORM: ${{ matrix.platform }}
           TARGET: ${{ matrix.target }}
         run: |

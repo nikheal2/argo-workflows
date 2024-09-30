@@ -80,7 +80,7 @@ jobs:
           image_name="${DOCKERIO_ORG}/${TARGET}:${tag}-${tag_suffix}"
 
           #listing builder for debugging
-          echo ${docker buildx ls}
+          echo $(docker buildx ls)
           docker buildx build \
             --cache-from "type=local,src=/tmp/.buildx-cache" \
             --cache-to "type=local,dest=/tmp/.buildx-cache" \

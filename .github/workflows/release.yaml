@@ -90,7 +90,7 @@ jobs:
             --target $TARGET \
             --provenance=false \
             --tag $image_name \
-            --tag quay.io/$image_name .
+            --tag $image_name .
 
   build-windows:
     name: Build & push windows

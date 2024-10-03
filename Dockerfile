@@ -34,7 +34,7 @@ COPY ui/package.json ui/yarn.lock ui/
 
 RUN --mount=type=cache,target=/root/.yarn \
   YARN_CACHE_FOLDER=/root/.yarn JOBS=max \
-  yarn --cwd ui install --network-timeout 1000000
+  yarn --cwd ui install
 
 COPY ui ui
 COPY api api

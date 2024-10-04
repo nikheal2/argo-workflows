@@ -32,13 +32,13 @@ RUN apk update && apk add --no-cache git
 
 COPY ui/package.json ui/yarn.lock ui/
 
-RUN JOBS=max \
+RUN --mount=type=cache JOBS=max \
   yarn -v --cwd ui install  --network-timeout 10000000
 
 COPY ui ui
 COPY api api
 
-RUN NODE_OPTIONS="--max-old-space-size=2048" JOBS=max yarn -v --cwd ui build --network-timeout=1000000
+RUN --mount=type=cache NODE_OPTIONS="--max-old-space-size=2048" JOBS=max yarn -v --cwd ui build --network-timeout=1000000
 
 ####################################################################################################
 
